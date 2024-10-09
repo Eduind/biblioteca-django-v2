@@ -24,6 +24,7 @@ class AutorSerializer(serializers.Serializer):
             instance.nome = validated_data.get('nome', instance.nome)
             instance.save()
             return instance
+        
 class LivroSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     titulo = serializers.CharField(max_length=200)
